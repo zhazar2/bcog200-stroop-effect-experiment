@@ -51,6 +51,8 @@ accurate classification of congruent vs incongruent trials
 correctness of analysis calculations
 
 **PYTHON SCRIPT FILES**
+
+
 import random
 import time
 import tkinter as tk
@@ -73,7 +75,6 @@ def generate_trial(colors):
 
 
 def run_experiment(num_trials):
-    """Run the Stroop experiment and collect results."""
     results = []
 
     for _ in range(num_trials):
@@ -88,7 +89,6 @@ def run_experiment(num_trials):
 
 
 def analyze_results(results):
-    """Analyze Stroop experiment results."""
 
     congruent_times = []
     incongruent_times = []
@@ -103,7 +103,6 @@ def analyze_results(results):
         "congruent_avg": sum(congruent_times) / len(congruent_times) if congruent_times else 0,
         "incongruent_avg": sum(incongruent_times) / len(incongruent_times) if incongruent_times else 0
     }
-
 
 
 from stroop_gui import generate_trial
